@@ -45,5 +45,5 @@ def get_info(input_pdf, output_pdf,old_text):
     return matches
 
 
-result=get_info("utpal_newcv.pdf","output.pdf","old")
+result=get_info("input.pdf","output.pdf","old")
 
