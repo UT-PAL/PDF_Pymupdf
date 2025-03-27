@@ -28,7 +28,7 @@ pip install pymupdf
 Execute the script with the required parameters:
 
 ```python
-result = get_info("utpal_newcv.pdf", "output.pdf", "old")
+result = get_info("input.pdf", "output.pdf", "old")
 ```
 
 ### Output
