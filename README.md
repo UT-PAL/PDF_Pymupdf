@@ -1,4 +1,4 @@
-# PDF Text Analysis and Highlighting
+# PDF Text Analysis and Highlighting(getinfo_fitz.py)
 
 ## Overview
 This script processes a PDF document to extract and analyze text, font properties, and bounding boxes. It highlights the detected text spans using randomly colored rectangles.
@@ -64,4 +64,61 @@ Bboxes: (50.0, 100.0, 200.0, 120.0)
 
 ## License
 This project is open-source and can be used freely with modifications as needed.
+
+# PDF Text Replacement Tool (pdf_text_replace.py)
+
+## Overview
+This Python script allows you to replace specific text in a PDF file while preserving the original font style and color as closely as possible. The script uses `PyMuPDF` (also known as Fitz) for text extraction and manipulation, and `pdf2image` for rendering pages when needed.
+
+## Features
+- Extracts text and font details from a PDF file.
+- Replaces occurrences of specified text with new text.
+- Preserves original font style and color.
+- Saves the modified PDF as a new file.
+
+## Requirements
+Ensure you have the following Python libraries installed:
+
+```sh
+pip install pymupdf numpy pdf2image 
+```
+
+Additionally, for `pdf2image`, you may need to install `poppler`:
+
+- **Windows**: Download and install `poppler` from [this link](https://github.com/oschwartz10612/poppler-windows/releases).
+- **Linux/macOS**: Install using package manager:
+  ```sh
+  sudo apt install poppler-utils   # Ubuntu/Debian
+  brew install poppler            # macOS
+  ```
+
+## Usage
+
+### Running the Script
+To run the script, use the following command:
+
+```sh
+python script.py
+```
+
+Make sure to modify the `replace_text()` function call with the correct file paths and text to be replaced.
+
+### Example Usage in Code
+```python
+replace_text("utpal.pdf", "utpal_newcv_edited.pdf", "Link", "utpal")
+```
+
+### Parameters
+- `input_pdf`: Path to the original PDF file.
+- `output_pdf`: Path to save the modified PDF file.
+- `old_text`: The text in the PDF that needs to be replaced.
+- `new_text`: The new text that will replace the old text.
+
+## Known Limitations
+- If the text in the PDF is embedded as an image, this method won't work directly.
+- The script assumes uniform character spacing, which may not work perfectly with some fonts.
+
+## License
+This project is open-source and free to use under the MIT License.
+
 
