@@ -105,7 +105,7 @@ Make sure to modify the `replace_text()` function call with the correct file pat
 
 ### Example Usage in Code
 ```python
-replace_text("utpal.pdf", "utpal_newcv_edited.pdf", "Link", "utpal")
+replace_text("input.pdf", "output.pdf", "old_text", "new_text")
 ```
 
 ### Parameters
