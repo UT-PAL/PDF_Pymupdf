@@ -120,5 +120,91 @@ replace_text("input.pdf", "output.pdf", "old_text", "new_text")
 
 ## License
 This project is open-source and free to use under the MIT License.
+Here's a sample `README.md` for your project:
 
+---
+
+# PDF Text Replacement Tool more control (pymupdf_editor.py)
+
+A Python tool for searching and replacing text in PDF documents using the `PyMuPDF` (fitz) library. This tool supports the detection and modification of specific text spans based on color boxes marked on the document. It allows users to replace text in the selected areas with custom input.
+
+## Features
+
+- **Text Replacement**: Search and replace text in a PDF file.
+- **Font Support**: Works with basic fonts like "helv" (Helvetica) and "cour" (Courier).
+- **Text Detection**: Identifies text spans and allows you to manually approve or reject replacements.
+- **Transparency Support**: Handles text with transparency, preserving the original appearance of the document.
+- **Color Box Marking**: Supports marking areas of the PDF with colored boxes for text replacement.
+
+## Prerequisites
+
+- Python 3.x
+- Required Python Libraries:
+  - `PyMuPDF` (for PDF manipulation)
+  - `pdf2image` (for converting PDF pages to images)
+  - `opencv-python` (for image processing)
+  - `fitz_marker` (custom library for marking text)
+  
+To install the required dependencies, run:
+
+```bash
+pip install fitz pdf2image opencv-python
+```
+
+If you don’t have `fitz_marker`, make sure it is available or replace it with a similar functionality for marking the text.
+
+## How to Use
+
+1. **Run the script**:
+   - Open a terminal and execute the script.
+   
+2. **Enter the input PDF**:
+   - When prompted, enter the name of the PDF file where you want to replace text.
+
+3. **Mark the PDF**:
+   - The script will first create a marked version of the input PDF by drawing colored boxes around selected areas. You’ll see a saved PDF (`fitz_marker.pdf`) that shows these marked areas.
+
+4. **Select Text to Replace**:
+   - Once the marked PDF is ready, input the text you want to replace. The tool will detect this text and prompt you to confirm replacements.
+
+5. **Replace the Text**:
+   - If you want to replace the detected text, enter "y" and provide the new text. The replacement will maintain the font, color, and transparency.
+
+6. **Save the Edited PDF**:
+   - After performing the replacements, the tool will save the updated PDF as `utpal_newcv_edited.pdf`.
+
+## Example Usage
+
+```bash
+python replace_text.py
+```
+
+You will be prompted to:
+
+1. Enter the input PDF filename (e.g., `input.pdf`).
+2. View the marked PDF (`fitz_marker.pdf`) and input the text to replace.
+3. Confirm replacements and input the new text.
+
+The final output will be saved as `utpal_newcv_edited.pdf`.
+
+## File Structure
+
+- **replace_text.py**: The main script to run the PDF text replacement.
+- **fitz_marker.py**: Custom module used to mark text areas (ensure it's available).
+- **input.pdf**: The original PDF file.
+- **utpal_newcv_edited.pdf**: The edited PDF output after text replacement.
+
+## Supported Fonts
+
+- **helv** (Helvetica)
+- **cour** (Courier)
+
+## Limitations
+
+- Only text spans marked with colored boxes will be considered for replacement.
+- The replacement text should not exceed the length of the original text span to avoid layout issues.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
