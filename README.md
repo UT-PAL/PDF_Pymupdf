@@ -120,9 +120,6 @@ replace_text("input.pdf", "output.pdf", "old_text", "new_text")
 
 ## License
 This project is open-source and free to use under the MIT License.
-Here's a sample `README.md` for your project:
-
----
 
 # PDF Text Replacement Tool more control (pymupdf_editor.py)
 
@@ -206,5 +203,5 @@ The final output will be saved as `utpal_newcv_edited.pdf`.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open-source and free to use under the MIT License.
 
