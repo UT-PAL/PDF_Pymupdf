@@ -121,7 +121,7 @@ replace_text("input.pdf", "output.pdf", "old_text", "new_text")
 ## License
 This project is open-source and free to use under the MIT License.
 
-# PDF Text Replacement Tool more control (pymupdf_editor.py)
+# PDF Text Replacement Tool more control (Folder: custom editor)
 
 A Python tool for searching and replacing text in PDF documents using the `PyMuPDF` (fitz) library. This tool supports the detection and modification of specific text spans based on color boxes marked on the document. It allows users to replace text in the selected areas with custom input.
 
